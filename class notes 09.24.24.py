@@ -17,3 +17,6 @@ df = pd.read_csv(filename)
 # min_idx = jpn_df['dollar_price'].idxmax()
 
 # print(min_idx)
+
+for index, row in df.iterrows():
+    print(df['date'][index])
