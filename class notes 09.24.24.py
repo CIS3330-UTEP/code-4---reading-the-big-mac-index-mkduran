@@ -18,5 +18,10 @@ df = pd.read_csv(filename)
 
 # print(min_idx)
 
-for index, row in df.iterrows():
-    print(df['date'][index])
+# for index, row in df.iterrows():
+#     print(df['date'][index])
+
+# def get_new_country_name(row):
+#     new_country_name =f"{row['name']}({row['iso_a3']})"
+#     print(new_country_name)
+
