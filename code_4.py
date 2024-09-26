@@ -13,10 +13,9 @@ df = pd.read_csv('./big-mac-full-index.csv')
 # print(year_country_price)
 
 def get_big_mac_price_by_year(year,country_code):
-    pass
     df['year']= df['date'].str[:4]
     df['iso_a3']=df['iso_a3'].str.lower()
-    df['dollar_price'] = df['dollar_price'].round(2)
+    df['dollar_price'] = df['dollar_price'].round(2).mean()
     year_country_price=df[['year','iso_a3','dollar_price']]
     return(year_country_price)
 
