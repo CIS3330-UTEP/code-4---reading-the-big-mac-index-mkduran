@@ -1,16 +1,7 @@
 import pandas as pd
 
 df = pd.read_csv('./big-mac-full-index.csv')
-# df['date'] = pd.to_datetime(df['date'])
-# df['year']=df['date'].dt.year
-# df_year_iso = df[['year','iso_a3']]
-# print(df_year_iso)
-
-
-
-
-
-# print(df)
+print(df)
 
 # country_code = "JPN" # i dont need to do this on Code 4
 # df['iso_a3'] = df['iso_a3'].str.lower()
