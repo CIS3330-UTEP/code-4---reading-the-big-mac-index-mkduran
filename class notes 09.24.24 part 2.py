@@ -17,9 +17,9 @@ df['iso_a3'] = df['iso_a3'].str.lower()
 query_text = df['iso_a3']
 print(query_text)
 
-# print(len(df))
-sub_df = df.query(query_text)
-print(len(sub_df))
+# # print(len(df))
+# sub_df = df.query(query_text)
+# print(len(sub_df))
 
 # print(sub_df)
 
