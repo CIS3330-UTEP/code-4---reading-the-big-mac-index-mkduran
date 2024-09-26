@@ -1,20 +1,21 @@
 import pandas as pd
 
 df = pd.read_csv('./big-mac-full-index.csv')
-df['date'] = pd.to_datetime(df['date'])
-df['year']=df['date'].dt.year
-df_year_iso = df[['year','iso_a3']]
-print(df_year_iso)
+# df['date'] = pd.to_datetime(df['date'])
+# df['year']=df['date'].dt.year
+# df_year_iso = df[['year','iso_a3']]
+# print(df_year_iso)
 
 
 
 
 
-#print(df)
+# print(df)
 
 # country_code = "JPN" # i dont need to do this on Code 4
-
-# query_text = f"(iso_a3 == '{country_code}')"
+df['iso_a3'] = df['iso_a3'].str.lower()
+query_text = df['iso_a3']
+print(query_text)
 
 # print(len(df))
 # sub_df = df.query(query_text)
@@ -22,9 +23,9 @@ print(df_year_iso)
 
 # print(sub_df)
 
-# # print(sub_df.loc[21])
-# # ("/n")
-# # print(sub_df.iloc[21])
+# print(sub_df.loc[21])
+# ("/n")
+# print(sub_df.iloc[21])
 
 # print(sub_df['dollar_price'].mean())
 
