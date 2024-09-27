@@ -30,6 +30,9 @@ def get_the_cheapest_big_mac_price_by_year(year):
 def get_the_most_expensive_big_mac_price_by_year(year):
     pass # Remove this line and code your function
 
+get_big_mac_price_by_year()
+
 if __name__ == "__main__":
-    result_a = get_big_mac_price_by_year(2010,'arg')
-    print(result_a)
+    pass
+    # result_a = get_big_mac_price_by_year(2010,'arg')
+    # print(result_a)
