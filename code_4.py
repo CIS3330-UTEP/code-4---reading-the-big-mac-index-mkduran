@@ -4,7 +4,7 @@ big_mac_file = './big-mac-full-index.csv'
 df = pd.read_csv('./big-mac-full-index.csv')
 
 def get_big_mac_price_by_year(year,country_code):
-    cc = df['iso_a3'].str.lower()
+    cc = set(df['iso_a3'].str.lower())
     if country_code.lower() in cc:
         query = df[(df['iso_a3'].str.lower() == country_code.lower()) & (df['date'].str.startswith(str(year)))]
         rounda = round(query['dollar_price'].mean(),2)
@@ -21,6 +21,5 @@ def get_the_most_expensive_big_mac_price_by_year(year):
     pass # Remove this line and code your function
 
 if __name__ == "__main__":
-    pass
-    # result_a = get_big_mac_price_by_year(2010,"arg")
-    # print(result_a)
+    result_a = get_big_mac_price_by_year(2010,"arg")
+    print(result_a)
