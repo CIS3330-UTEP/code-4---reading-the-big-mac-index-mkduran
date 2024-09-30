@@ -5,7 +5,7 @@ df = pd.read_csv('./big-mac-full-index.csv')
 cc = set(df['iso_a3'].str.lower())
 def get_big_mac_price_by_year(year,country_code):
     #cc = set(df['iso_a3'].str.lower()) # removed from code to have for the rest of code 4
-    if country_code.lower() in cc:
+    if country_code in cc:
         query = df[(df['iso_a3'].str.lower() == country_code.lower()) & (df['date'].str.startswith(str(year)))]
         rounda = round(query['dollar_price'].mean(),2)
     
